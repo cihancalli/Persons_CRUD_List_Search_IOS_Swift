@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EwD-UP-flI">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Persons-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Persons_CRUD_List_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="O2V-3Z-2N6">
+                                <rect key="frame" x="0.0" y="88" width="390" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AR3-p8-5pr">
+                                <rect key="frame" x="0.0" y="139" width="390" height="671"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personCell" id="iLO-Lq-Xcp" customClass="PersonCellTableViewCell" customModule="Persons_CRUD_List_Search" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iLO-Lq-Xcp" id="G7V-mn-f6x">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiT-4B-iYO">
+                                                    <rect key="frame" x="174" y="11.333333333333336" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZiT-4B-iYO" firstAttribute="centerY" secondItem="G7V-mn-f6x" secondAttribute="centerY" id="fLF-MJ-KgN"/>
+                                                <constraint firstItem="ZiT-4B-iYO" firstAttribute="centerX" secondItem="G7V-mn-f6x" secondAttribute="centerX" id="uF7-7V-nNm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="PersonTextLabel" destination="ZiT-4B-iYO" id="8tv-gs-eWS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AR3-p8-5pr" secondAttribute="trailing" id="DWf-4s-Mpp"/>
+                            <constraint firstItem="AR3-p8-5pr" firstAttribute="top" secondItem="O2V-3Z-2N6" secondAttribute="bottom" id="Dc6-fu-zah"/>
+                            <constraint firstItem="O2V-3Z-2N6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Inz-JZ-c4V"/>
+                            <constraint firstItem="AR3-p8-5pr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LQO-Nc-dxH"/>
+                            <constraint firstItem="O2V-3Z-2N6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OsS-5Z-uYD"/>
+                            <constraint firstItem="AR3-p8-5pr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZdC-48-BHy"/>
+                            <constraint firstItem="O2V-3Z-2N6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xaZ-6J-2Ak"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Persons" id="4N5-ej-IMJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Eo-GN-bm6">
+                            <connections>
+                                <segue destination="eMW-wo-uTu" kind="show" identifier="toAdd" id="CEB-sy-gN7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="personTableView" destination="AR3-p8-5pr" id="ivD-Yw-kJH"/>
+                        <outlet property="searchBar" destination="O2V-3Z-2N6" id="cr8-Q1-NJb"/>
+                        <segue destination="MiK-X5-pkR" kind="show" identifier="toUpdate" id="PbF-iv-TnC"/>
+                        <segue destination="kEo-v1-w8B" kind="show" identifier="toDetail" id="93W-zZ-0SC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.84615384615381" y="69.66824644549763"/>
+        </scene>
+        <!--Person Update-->
+        <scene sceneID="f0K-72-DX8">
+            <objects>
+                <viewController id="MiK-X5-pkR" customClass="UpdateViewController" customModule="Persons_CRUD_List_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ypk-ET-IPd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Person Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3h-KF-J9C">
+                                <rect key="frame" x="16" y="188" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Person Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YiT-wH-Bfr">
+                                <rect key="frame" x="16" y="272" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dg-yF-Kgf">
+                                <rect key="frame" x="16" y="397" width="358" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Update">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didUpdateButtonTapped:" destination="MiK-X5-pkR" eventType="touchUpInside" id="88r-68-Uoy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kK5-Ph-qg2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Person Update" id="4jT-gj-4UL"/>
+                    <connections>
+                        <outlet property="updatePersonNameTextField" destination="V3h-KF-J9C" id="8Sc-KT-wyR"/>
+                        <outlet property="updatePersonPhoneNumberTextField" destination="YiT-wH-Bfr" id="VeD-CI-cNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ic-vC-LsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.8461538461538" y="418.72037914691941"/>
+        </scene>
+        <!--Person Detail-->
+        <scene sceneID="hDR-gi-XNo">
+            <objects>
+                <viewController id="kEo-v1-w8B" customClass="DetailsViewController" customModule="Persons_CRUD_List_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i12-6y-tSF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7B-ri-uHz">
+                                <rect key="frame" x="16" y="188" width="358" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy1-7k-PNA">
+                                <rect key="frame" x="16" y="274" width="358" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NtI-Al-vfJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Person Detail" id="WlC-Fe-9B4"/>
+                    <connections>
+                        <outlet property="detailPersonNameTextField" destination="U7B-ri-uHz" id="oRb-V2-UKb"/>
+                        <outlet property="detailPersonPhoneNumberTextField" destination="Sy1-7k-PNA" id="n4I-sn-Qbk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXD-aS-Zp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.84615384615381" y="804.73933649289097"/>
+        </scene>
+        <!--Person Add-->
+        <scene sceneID="N6x-VR-PuU">
+            <objects>
+                <viewController id="eMW-wo-uTu" customClass="AddViewController" customModule="Persons_CRUD_List_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3VY-fd-QLc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Person Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MR1-pJ-uHE">
+                                <rect key="frame" x="16" y="179" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Person Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T1b-BN-fB7">
+                                <rect key="frame" x="16" y="263" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83N-De-geX">
+                                <rect key="frame" x="16" y="397" width="358" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didAddPersonButtonTapped:" destination="eMW-wo-uTu" eventType="touchUpInside" id="J4c-ou-Z3l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kzh-UF-fSl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Person Add" id="sng-3E-fUg"/>
+                    <connections>
+                        <outlet property="addPersonNameTextField" destination="MR1-pJ-uHE" id="2Cc-wI-SaP"/>
+                        <outlet property="addPersonPhoneNumberTextField" destination="T1b-BN-fB7" id="R1a-t9-Y7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwa-dR-278" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.8461538461538" y="-276.54028436018956"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ARR-B9-818">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EwD-UP-flI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oym-xP-p5Z">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wTG-Dc-eFm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTr-Sr-srZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.615384615384613" y="69.66824644549763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

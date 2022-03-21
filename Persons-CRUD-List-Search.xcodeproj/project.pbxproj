@@ -14,6 +14,10 @@
 		998BE2AF27E8E320004200B1 /* Persons_CRUD_List_Search.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 998BE2AD27E8E320004200B1 /* Persons_CRUD_List_Search.xcdatamodeld */; };
 		998BE2B127E8E323004200B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 998BE2B027E8E323004200B1 /* Assets.xcassets */; };
 		998BE2B427E8E323004200B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 998BE2B227E8E323004200B1 /* LaunchScreen.storyboard */; };
+		998BE2BF27E8E594004200B1 /* PersonCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BE2BE27E8E594004200B1 /* PersonCellTableViewCell.swift */; };
+		998BE2C127E8E8A1004200B1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BE2C027E8E8A1004200B1 /* AddViewController.swift */; };
+		998BE2C327E8E8CE004200B1 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BE2C227E8E8CE004200B1 /* UpdateViewController.swift */; };
+		998BE2C527E8E904004200B1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BE2C427E8E904004200B1 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		998BE2B027E8E323004200B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		998BE2B327E8E323004200B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		998BE2B527E8E323004200B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		998BE2BE27E8E594004200B1 /* PersonCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonCellTableViewCell.swift; path = "Persons-CRUD-List-Search/Controllers/PersonCellTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		998BE2C027E8E8A1004200B1 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = "Persons-CRUD-List-Search/Controllers/AddViewController.swift"; sourceTree = SOURCE_ROOT; };
+		998BE2C227E8E8CE004200B1 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpdateViewController.swift; path = "Persons-CRUD-List-Search/Controllers/UpdateViewController.swift"; sourceTree = SOURCE_ROOT; };
+		998BE2C427E8E904004200B1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,44 @@
 		998BE2A327E8E320004200B1 /* Persons-CRUD-List-Search */ = {
 			isa = PBXGroup;
 			children = (
+				998BE2BD27E8E340004200B1 /* Views */,
+				998BE2BC27E8E33A004200B1 /* Controllers */,
+				998BE2BB27E8E332004200B1 /* Supporting Files */,
+			);
+			path = "Persons-CRUD-List-Search";
+			sourceTree = "<group>";
+		};
+		998BE2BB27E8E332004200B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				998BE2A427E8E320004200B1 /* AppDelegate.swift */,
 				998BE2A627E8E320004200B1 /* SceneDelegate.swift */,
-				998BE2A827E8E320004200B1 /* ViewController.swift */,
-				998BE2AA27E8E320004200B1 /* Main.storyboard */,
 				998BE2B027E8E323004200B1 /* Assets.xcassets */,
 				998BE2B227E8E323004200B1 /* LaunchScreen.storyboard */,
 				998BE2B527E8E323004200B1 /* Info.plist */,
 				998BE2AD27E8E320004200B1 /* Persons_CRUD_List_Search.xcdatamodeld */,
 			);
-			path = "Persons-CRUD-List-Search";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		998BE2BC27E8E33A004200B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				998BE2C427E8E904004200B1 /* DetailsViewController.swift */,
+				998BE2C227E8E8CE004200B1 /* UpdateViewController.swift */,
+				998BE2C027E8E8A1004200B1 /* AddViewController.swift */,
+				998BE2BE27E8E594004200B1 /* PersonCellTableViewCell.swift */,
+				998BE2A827E8E320004200B1 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		998BE2BD27E8E340004200B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				998BE2AA27E8E320004200B1 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +179,11 @@
 			files = (
 				998BE2AF27E8E320004200B1 /* Persons_CRUD_List_Search.xcdatamodeld in Sources */,
 				998BE2A927E8E320004200B1 /* ViewController.swift in Sources */,
+				998BE2C127E8E8A1004200B1 /* AddViewController.swift in Sources */,
+				998BE2C527E8E904004200B1 /* DetailsViewController.swift in Sources */,
+				998BE2BF27E8E594004200B1 /* PersonCellTableViewCell.swift in Sources */,
 				998BE2A527E8E320004200B1 /* AppDelegate.swift in Sources */,
+				998BE2C327E8E8CE004200B1 /* UpdateViewController.swift in Sources */,
 				998BE2A727E8E320004200B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Persons-CRUD-List-Search/Info.plist";
+				INFOPLIST_FILE = "Persons-CRUD-List-Search/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Persons-CRUD-List-Search/Info.plist";
+				INFOPLIST_FILE = "Persons-CRUD-List-Search/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

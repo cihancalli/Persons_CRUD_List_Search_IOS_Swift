@@ -8,14 +8,20 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    @IBOutlet weak var detailPersonNameTextField: UILabel!
-    @IBOutlet weak var detailPersonPhoneNumberTextField: UILabel!
+    
+    @IBOutlet weak var detailPersonNameLabel: UILabel!
+    @IBOutlet weak var detailPersonPhoneNumberLabel: UILabel!
+    
+    var person: Persons?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let p = person {
+            detailPersonNameLabel.text =  p.person_name
+            detailPersonPhoneNumberLabel.text = p.person_phone_number
+        }
     }
 
 }

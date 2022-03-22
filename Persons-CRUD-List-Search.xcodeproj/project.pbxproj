@@ -47,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9918BFEB27EA334500AA62B4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				998BE2AD27E8E320004200B1 /* Persons_CRUD_List_Search.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		998BE29827E8E320004200B1 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +74,7 @@
 		998BE2A327E8E320004200B1 /* Persons-CRUD-List-Search */ = {
 			isa = PBXGroup;
 			children = (
+				9918BFEB27EA334500AA62B4 /* Models */,
 				998BE2BD27E8E340004200B1 /* Views */,
 				998BE2BC27E8E33A004200B1 /* Controllers */,
 				998BE2BB27E8E332004200B1 /* Supporting Files */,
@@ -81,7 +90,6 @@
 				998BE2B027E8E323004200B1 /* Assets.xcassets */,
 				998BE2B227E8E323004200B1 /* LaunchScreen.storyboard */,
 				998BE2B527E8E323004200B1 /* Info.plist */,
-				998BE2AD27E8E320004200B1 /* Persons_CRUD_List_Search.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

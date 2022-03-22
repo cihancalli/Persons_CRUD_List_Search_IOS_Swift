@@ -77,7 +77,7 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource {
 extension ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-         print("Arama sonuç \(searchText )")
+         print("Arama sonuç \(searchText)")
     }
     
 }
